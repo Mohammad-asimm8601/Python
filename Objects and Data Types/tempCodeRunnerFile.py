@@ -1,4 +1,2 @@
-
-x = 'Hello world'
-x = x + " it is beautiful outside!"
-print(x)
+content = open('myfile.txt')
+print(content.read())

@@ -1,22 +1,21 @@
-# Assign variable string
+# Strings are ordered sequences of character written inside quotes and it is immutable.
 
-str = 'hello'
+str = "hello"
 print(str)
 
 str = "world"
 print(str)
 
-str = 'this is also a string'
+str = "this is also a string"
 print(str)
 
 str = "I'm going on a run"
 print(str)
 
 
-
 # \n used for next line
 
-str = 'Hello\nworld'
+str = "Hello\nworld"
 print(str)
 
 a = "Asim"
@@ -43,7 +42,6 @@ print(str[0:5:2])
 print(str[::-1])
 
 
-
 # Immutability
 
 name = "Kara"
@@ -56,17 +54,17 @@ print(name)
 # concatenation
 
 last_letters = name[2:]
-print('Sha' + last_letters)
+print("Sha" + last_letters)
 
-x = 'Hello world'
+x = "Hello world"
 x = x + " it is beautiful outside!"
 print(x)
 
 
 # String multiplication
 
-letter = 'z'
-z = letter*10;
+letter = "z"
+z = letter * 10
 print(z)
 
 
@@ -79,6 +77,25 @@ print(x.capitalize())
 
 # split method
 
-x = 'Hello World'
+x = "Hello World"
 print(x.split())
-print(x.split('l'))
+print(x.split("l"))
+
+
+# Formate method
+
+print("This is a string {}".format("INSERTED"))
+print("The {2} {1} {0}".format("fox", "brown", "quick"))
+print("The {q} {b} {f}".format(f="fox", b="brown", q="quick"))
+
+
+# float formatting method
+
+result = 100 / 777
+print(result)
+print("The result was {r:1.3f}".format(r=result))
+
+
+# f string
+name = "Jose"
+print(f"Hello, his name is {name}")
