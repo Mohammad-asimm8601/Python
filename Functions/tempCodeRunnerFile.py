@@ -1,8 +1,5 @@
 
-def myfunc(kwargs):
-    if 'fruit' in kwargs:
-        print('My fruit of choice is {}'.format(kwargs['fruit']))
-    else:
-        print('I did not find any fruits here')
-    
-myfunc(juice = 'apple', fruit= 'orange')
+my_nums = [10,21, 32, 43, 54]
+print(list(map(lambda num : num**2, my_nums)))
+
+print(list(filter(lambda num : num%2 == 0, my_nums)))
