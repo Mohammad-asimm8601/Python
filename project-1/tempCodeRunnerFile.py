@@ -1,74 +1,22 @@
 
-# 1) Display game
-game_list = [0, 1, 2]
+def player_input():
+    marker = ''
 
-def display_game(game_list):
-    print("Here is the current list")
-    print(game_list)
+    # keeping asking player 1 too choose X or O
 
-# display_game(game_list)
+    while marker != 'X' and marker != 'O':
+        marker = input('Player 1, choose X or O: ')
 
- 
-# 2) position choice
+    # Assign player 2, the opposite marker
+    player1 = marker
 
-def position_choice():
-
-    choice = 'wrong'
-
-    while choice not in ['0', '1', '2']:
-
-        choice = input("Pick a position (0,1,2): ")
-
-        if choice not in ['0', '1', '2']:
-            print("Sorry, Invalid choice! ")
-
-    return int(choice)
-
-# position_choice()
-
-
-# Replacement choice
-
-def replacement_choice(game_list, position):
-
-    user_placement = input("Type a string to place at position: ")
-
-    game_list[position] = user_placement
-
-    return game_list
-
-# Game On Choice
-
-def gameon_choice():
-
-    choice = 'wrong'
-
-    while choice not in ['Y', 'N']:
-
-        choice = input("Keep playing? (Y or N): ")
-
-        if choice not in ['Y', 'N']:
-            print("Sorry, I dont understand, please choose Y or N")
-
-    if choice == "Y":
-        return True
+    if player1 == 'X':
+        player2 = 'O'
     else:
-        return False
+        player2 = 'X'
     
+    return (player1, player2)
 
-game_on = True
-game_list = [0, 1, 2]
-print('\n')
-print("<---- Welcome To The Tic Tac Toe Game! ---->")
-print('\n')
-while game_on:
-
-    display_game(game_list)
-
-    position = position_choice()
-
-    game_list = replacement_choice(game_list, position)
-
-    display_game(game_list)
-
-    game_on = gameon_choice()
+player1_marker, player2_marker = player_input()
+print('Player 1 : '+player1_marker)
+print('Player 2 : '+player2_marker)

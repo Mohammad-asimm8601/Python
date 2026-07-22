@@ -134,3 +134,52 @@ while game_on:
     display_game(game_list)
 
     game_on = gameon_choice()
+
+
+
+
+# Display board
+from IPython.display import clear_output
+
+test_board = ['#','X','O','X','O','X','O','X','O','X']
+
+def display_board(board):
+    clear_output()
+    print('  | '+'  | ')
+    print(board[7]+' | '+board[8]+' | '+board[9])
+    print('  | '+'  | ')
+    print('---------')
+    print('  | '+'  | ')
+    print(board[4]+' | '+board[5]+' | '+board[6])
+    print('  | '+'  | ')
+    print('---------')
+    print('  | '+'  | ')
+    print(board[1]+' | '+board[2]+' | '+board[3])
+    print('  | '+'  | ')
+
+display_board(test_board)
+
+
+# player input
+
+def player_input():
+    marker = ''
+
+    # keeping asking player 1 too choose X or O
+
+    while marker != 'X' and marker != 'O':
+        marker = input('Player 1, choose X or O: ')
+
+    # Assign player 2, the opposite marker
+    player1 = marker
+
+    if player1 == 'X':
+        player2 = 'O'
+    else:
+        player2 = 'X'
+    
+    return (player1, player2)
+
+player1_marker, player2_marker = player_input()
+print('Player 1 : '+player1_marker)
+print('Player 2 : '+player2_marker)
